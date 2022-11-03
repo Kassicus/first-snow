@@ -19,8 +19,6 @@ class Player(pygame.sprite.Sprite):
         self.pos += self.dir * lib.delta_time
         self.rect.center = self.pos
 
-        print(self.pos)
-
         self.move()
 
     def move(self) -> None:

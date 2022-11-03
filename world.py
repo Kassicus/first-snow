@@ -1,4 +1,5 @@
 import pygame
+import random
 
 import lib
 import player
@@ -11,9 +12,8 @@ class World():
         self.display_surface = pygame.display.get_surface()
 
         self.player = player.Player()
-        self.camera = camera.Camera("assets/test_image.png")
+        self.camera = camera.Camera()
         self.camera.add(self.player)
-
 
     def draw(self) -> None:
         self.camera.draw_camera()

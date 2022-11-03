@@ -8,7 +8,7 @@ pygame.init()
 class Game():
     def __init__(self) -> None:
         self.screen = pygame.display.set_mode([lib.SCREEN_WIDTH, lib.SCREEN_HEIGHT])
-        pygame.display.set_caption(str(lib.SCREEN_TITLE + lib.GAME_VERSION))
+        pygame.display.set_caption(str(lib.SCREEN_TITLE + " " + lib.GAME_VERSION))
 
         self.running = True
         self.clock = pygame.time.Clock()
@@ -30,7 +30,7 @@ class Game():
                 self.running = False
 
     def draw(self) -> None:
-        self.screen.fill(lib.color.BLACK)
+        self.screen.fill(lib.color.DIRT)
 
         self.world.draw()
 
